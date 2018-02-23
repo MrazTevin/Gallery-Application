@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 def welcome(request):
     '''
-    view function for welcome
+    function to display the index page
     '''
     return render(request, 'welcome.html')
 
