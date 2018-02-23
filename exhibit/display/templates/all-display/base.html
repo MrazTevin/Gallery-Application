@@ -9,6 +9,10 @@
   {% else %}
   <title> Tevin's Gallery<title>
   {% endif %}
+
+  {% block styles %}
+    {% bootstrap_css %}
+  {% endblock %}
 </head>
 <body>
     {% block content %}<h1> This is Tevin's Gallery</h1>{% endblock %}
