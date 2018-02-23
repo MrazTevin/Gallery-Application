@@ -8,3 +8,11 @@ def welcome(request):
     view function for welcome
     '''
     return HttpResponse('HelloWorld')
+
+
+def home(request):
+    '''
+    home function to display home images
+    '''
+
+    return HttpResponse('View home images for free')
