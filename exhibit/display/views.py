@@ -15,4 +15,4 @@ def home(request):
     home function to display home images
     '''
 
-    return HttpResponse('View home images for free')
+    return render(request, 'all-display/home.html')
