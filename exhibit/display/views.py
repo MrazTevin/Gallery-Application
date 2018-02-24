@@ -15,4 +15,4 @@ def home(request):
     home function to display home images
     '''
 
-    return render(request, 'all-display/home.html')
+    return render(request, 'home.html')
