@@ -17,6 +17,8 @@ class Images(models.Model):
     class Meta:
         ordering = ['name']
 
+# Location model to enable us choose location
+
 
 class Location(models.Model):
     name = models.CharField(max_length=30)
