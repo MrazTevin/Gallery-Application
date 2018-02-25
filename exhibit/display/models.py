@@ -45,7 +45,7 @@ class Images(models.Model):
     post = models.TextField()
     # one location may describe many images while many images may have one
     # location
-    location = models.ForeignKey(Location)
+    location = models.ForeignKey(Location, blank=True, default='some string')
     category = models.ForeignKey(Category, blank=True, default='some string')
 
     # __str__ will return string representation of the image model
