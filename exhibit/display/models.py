@@ -46,7 +46,7 @@ class Images(models.Model):
     # one location may describe many images while many images may have one
     # location
     location = models.ForeignKey(Location)
-    category = models.ForeignKey(Category, blank=True)
+    category = models.ForeignKey(Category, blank=True, default='some string')
 
     # __str__ will return string representation of the image model
     # __str__ will enable us view our returned queries
