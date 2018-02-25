@@ -13,3 +13,6 @@ class Images(models.Model):
     # __str__ will enable us view our returned queries
     def __str__(self):
         return self.image_name
+
+    class Meta:
+        ordering = ['name']
