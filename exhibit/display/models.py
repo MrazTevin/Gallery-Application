@@ -55,4 +55,4 @@ class Images(models.Model):
         return self.image_name
 
     class Meta:
-        ordering = ['first_name']
+        ordering = ['image_name']
