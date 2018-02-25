@@ -42,7 +42,7 @@ class Images(models.Model):
     image_name = models.CharField(max_length=20)
     image_description = models.CharField(max_length=30)
     # post will contain the image content
-    post = models.TextField()
+    post = models.TextField(default='string')
     # one location may describe many images while many images may have one
     # location
     location = models.ForeignKey(Location, blank=True, default='some string')
