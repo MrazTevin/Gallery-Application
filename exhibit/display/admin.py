@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Place, Photos, Order
+from .models import Place, Photo, Order
 
 # Register your models here.
-admin.site.register(Places)
-admin.site.register(Photos)
+admin.site.register(Place)
+admin.site.register(Photo)
 admin.site.register(Order)
