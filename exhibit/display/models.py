@@ -8,16 +8,16 @@ from django.db import models
 # django.db.utils.ProgrammingError: relation "display_location" already exists
 
 
-class Place(models.Model):
+class Location(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
 
-    def save_place(self):
+    def save_location(self):
         self.save()
 
-    def delete_place(self):
+    def delete_location(self):
         self.save()
 
 
@@ -44,17 +44,17 @@ ORDER_CHOICES = (
 )
 
 
-class Order(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=30)
     category_choices = models.CharField(max_length=10, choices=ORDER_CHOICES)
 
     def __str__(self):
         return self.name
 
-    def save_order(self):
+    def save_category(self):
         self.save()
 
-    def delete_order(self):
+    def delete_catgory(self):
         self.save()
 
 
@@ -62,15 +62,15 @@ class Order(models.Model):
 # django.db.utils.ProgrammingError: relation "display_images" already exists
 
 
-class Photo(models.Model):
-    photo_name = models.CharField(max_length=20)
-    photo_description = models.CharField(max_length=30)
+class Image(models.Model):
+    image_name = models.CharField(max_length=20)
+    image_description = models.CharField(max_length=30)
     # post will contain the image content
     # one location may describe many images while many images may have one
     # location
-    place = models.ForeignKey(Place)
-    order = models.ForeignKey(Order)
-    photo = models.ImageField(upload_to='photos/', null="True", blank="True",
+    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category)
+    image = models.ImageField(upload_to='photos/', null="True", blank="True",
                               width_field="width_field", height_field="height_field")
     width_field = models.IntegerField(default=0)
     height_field = models.IntegerField(default=0)
@@ -79,23 +79,23 @@ class Photo(models.Model):
     # __str__ will enable us view our returned queries
 
     def __str__(self):
-        return self.photo_name
+        return self.image_name
 
-    def save_photo(self):
+    def save_image(self):
         self.save()
 
-    def delete_photo(self):
+    def delete_image(self):
         self.delete()
 
     @classmethod
-    def search_by_order(cls, search_term):
+    def search_by_category(cls, search_term):
         display = cls.objects.filter(title__icontains=search_term)
         return display
 
     @classmethod
-    def filter_by_place(cls, place):
-        display = cls.objects.filter(place)
+    def filter_by_location(cls, location):
+        display = cls.objects.filter(location)
         return display
 
     class Meta:
-        ordering = ['photo_name']
+        ordering = ['image_name']
