@@ -70,6 +70,10 @@ class Photo(models.Model):
     # location
     place = models.ForeignKey(Place)
     order = models.ForeignKey(Order)
+    image = models.ImageField(upload_to='photos/', null="True", blank="True",
+                              width_field="width_field", height_field="height_field")
+    width_field = models.IntegerField(default=0)
+    height_field = models.IntegerField(default=0)
 
     # __str__ will return string representation of the image model
     # __str__ will enable us view our returned queries
