@@ -5,9 +5,12 @@
   <!--looping through displays-->
   {% for display_item in images %}
 <div class="row">
-  <!-- displayin all images -->
+  <!-- displaying all images -->
+
+
   <div class="col-md-3 col-md-3 col-md-3 col-md-3">
     <img src="{{display_item.image.url}}" class="img-responsive" alt="image">
+  
   </div>
   {% empty %}
   <div class="row">
