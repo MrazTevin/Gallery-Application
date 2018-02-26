@@ -48,3 +48,14 @@ class OrderTestClass(TestCase):
         self.Home.delete_order()
         order = Order.objects.all()
         self.assertTrue(order)
+
+
+class PhotosTestClass(TestCase):
+    # setup method
+    def setUp(self):
+        self.Macbook = Photos(
+            name='Macbook', description='macbook pro on a table')
+
+    # Testing instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Macbook, Photos))
