@@ -56,6 +56,10 @@ def save_order(self):
     self.save()
 
 
+def delete_order(self):
+    self.save()
+
+
 class Photos(models.Model):
     photo_name = models.CharField(max_length=20)
     photo_description = models.CharField(max_length=30)
