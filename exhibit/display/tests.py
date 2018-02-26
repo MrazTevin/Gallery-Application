@@ -19,4 +19,4 @@ class PlacesTestClass(TestCase):
     def test_save_method(self):
         self.outdoor.save_places()
         places = Places.objects.all()
-        self.assertTrue(len(places) < 0)
+        self.assertTrue(places)
