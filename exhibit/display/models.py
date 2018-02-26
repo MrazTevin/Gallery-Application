@@ -48,16 +48,18 @@ class Order(models.Model):
     name = models.CharField(max_length=30)
     category_choices = models.CharField(max_length=1, choices=ORDER_CHOICES)
 
+    def __str__(self):
+        return self.name
+
+    def save_order(self):
+        self.save()
+
+    def delete_order(self):
+        self.save()
+
+
 # renaming class Images to Photos due to error in terminal;
 # django.db.utils.ProgrammingError: relation "display_images" already exists
-
-
-def save_order(self):
-    self.save()
-
-
-def delete_order(self):
-    self.save()
 
 
 class Photos(models.Model):
