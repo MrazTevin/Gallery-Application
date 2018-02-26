@@ -59,3 +59,9 @@ class PhotosTestClass(TestCase):
     # Testing isinstance
     def test_instance(self):
         self.assertTrue(isinstance(self.Macbook, Photos))
+# Testing method
+
+    def test_save_method(self):
+        self.Macbook.save_photo()
+        photos = Photos.objects.all()
+        self.assertTrue(photos)
