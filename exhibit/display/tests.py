@@ -1,31 +1,31 @@
 from django.test import TestCase
-from .models import Places, Order, Photos
+from .models import Place, Order, Photo
 
 # Create your tests here.
 
 
-class PlacesTestClass(TestCase):
+class PlaceTestClass(TestCase):
     # setup method
     def setUp(self):
-        self.outdoor = Places(name='outdoor')
+        self.outdoor = Place(name='outdoor')
 
 
 # Testing instance
     def test_instance(self):
-        self.assertTrue(isinstance(self.outdoor, Places))
+        self.assertTrue(isinstance(self.outdoor, Place))
 
 # Testing method
     def test_save_method(self):
         self.outdoor.save_places()
-        places = Places.objects.all()
-        self.assertTrue(places)
+        place = Place.objects.all()
+        self.assertTrue(place)
 
     def test_delete_method(self):
-        self.outdoor = Places(name='outdoor')
+        self.outdoor = Place(name='outdoor')
         self.outdoor.save_places()
         self.outdoor.delete_places()
-        places = Places.objects.all()
-        self.assertTrue(places)
+        place = Place.objects.all()
+        self.assertTrue(place)
 
 
 class OrderTestClass(TestCase):
@@ -50,15 +50,15 @@ class OrderTestClass(TestCase):
         self.assertTrue(order)
 
 
-class PhotosTestClass(TestCase):
+class PhotoTestClass(TestCase):
     # setup method
     def setUp(self):
-        self.Macbook = Photos(
+        self.Macbook = Photo(
             photo_name='Macbook', photo_description='macbook pro on a table')
 
     # Testing isinstance
     def test_instance(self):
-        self.assertTrue(isinstance(self.Macbook, Photos))
+        self.assertTrue(isinstance(self.Macbook, Photo))
 #
 # # Testing method
 #
