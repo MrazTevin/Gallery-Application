@@ -68,8 +68,8 @@ class PhotosTestClass(TestCase):
         self.assertTrue(photos)
 
     def test_delete_method(self):
-        self.Macbook = Photos(image_name='Macbook',
-                              image_description='macbook pro on a table')
+        self.Macbook = Photos(photo_name='Macbook',
+                              photo_description='macbook pro on a table')
         self.Macbook.save_photos()
         self.macbook.delete_photos()
         photos = Photos.objects.all()
