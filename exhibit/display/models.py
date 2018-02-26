@@ -52,6 +52,10 @@ class Order(models.Model):
 # django.db.utils.ProgrammingError: relation "display_images" already exists
 
 
+def save_order(self):
+    self.save()
+
+
 class Photos(models.Model):
     photo_name = models.CharField(max_length=20)
     photo_description = models.CharField(max_length=30)
