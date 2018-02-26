@@ -38,6 +38,6 @@ class OrderTestClass(TestCase):
 
 # Testing method
     def test_save_method(self):
-        self.outdoor.save_order()
+        self.Home.save_order()
         order = Order.objects.all()
         self.assertTrue(order)
