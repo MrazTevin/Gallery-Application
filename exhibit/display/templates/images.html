@@ -3,7 +3,16 @@
 {% block content %}
 {{block.super}}
 <div class="container-fluid">
-<h1 class="text-center text-info" style="margin-top:60px;">Find any home images you need</h1>
-</div>
-
+  <!--looping through displays-->
+  {% for display_item in display %}
+<div class="row">
+  <!-- displayin all images -->
+  <div class="col-md-3 col-md-3 col-md-3 col-md-3">
+    <img src="{{diplay_item.article_image.url}}" class="img-responsive" alt="image">
+  </div>
+  {% empty %}
+  <div class="row">
+      <h2 class="text-center">There No Display Items</h2>
+  </div>
+  {% endfor %}
 {% endblock %}
