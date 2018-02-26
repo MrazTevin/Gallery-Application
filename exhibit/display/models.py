@@ -42,8 +42,8 @@ class Photos(models.Model):
     # post will contain the image content
     # one location may describe many images while many images may have one
     # location
-    location = models.ForeignKey(Location, blank=True, default=True)
-    category = models.ForeignKey(Category, blank=True, default=True)
+    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category)
 
     # __str__ will return string representation of the image model
     # __str__ will enable us view our returned queries
