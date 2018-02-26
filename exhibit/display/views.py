@@ -29,7 +29,8 @@ def search_results(request):
         searched_photos = Photo.search_by_order(search_term)
         message = f"{seach_term}"
 
-        return render(request, 'search.html', {"message": message, "photos": searched_photos}')
+        return render(request, 'search.html', {"message": message,
+                                               "photos": searched_photos})
 
     else:
         message = "You haven't searched for any term"
