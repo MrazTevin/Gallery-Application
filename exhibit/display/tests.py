@@ -71,7 +71,7 @@ class PhotoTestClass(TestCase):
 
     # Testing isinstance
     def test_instance(self):
-        self.assertTrue(isinstance(self.Macbook, Photo))
+        self.assertTrue(isinstance(self.Flower, Photo))
 
     def tearDown(self):
         Place.objects.all().delete()
