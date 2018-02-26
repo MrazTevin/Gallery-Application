@@ -3,11 +3,11 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def welcome(request):
+def images(request):
     '''
     function to display the index page
     '''
-    return render(request, 'welcome.html')
+    return render(request, 'images.html')
 
 
 def home(request):
