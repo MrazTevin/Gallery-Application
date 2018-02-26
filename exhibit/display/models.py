@@ -36,7 +36,7 @@ class Category(models.Model):
     category_choices = models.CharField(max_length=1, choices=CATEGORY_CHOICES)
 
 
-class Images(models.Model):
+class Photos(models.Model):
     image_name = models.CharField(max_length=20)
     image_description = models.CharField(max_length=30)
     # post will contain the image content
