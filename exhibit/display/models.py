@@ -70,7 +70,7 @@ class Photo(models.Model):
     # location
     place = models.ForeignKey(Place)
     order = models.ForeignKey(Order)
-    photo = models.PhotoField(upload_to='photos/', null="True", blank="True",
+    photo = models.ImageField(upload_to='photos/', null="True", blank="True",
                               width_field="width_field", height_field="height_field")
     width_field = models.IntegerField(default=0)
     height_field = models.IntegerField(default=0)
