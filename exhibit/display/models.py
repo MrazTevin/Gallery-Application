@@ -13,7 +13,11 @@ class Location(models.Model):
 
 
 # iterable tuple to use as choices of category field
-CATEGORY_CHOICES = (
+# renaming class Category to Order due to error in terminal;
+# django.db.utils.ProgrammingError: relation "display_category" already exists
+
+
+ORDER_CHOICES = (
     ('1', 'Vegetation'),
     ('2', 'Trees'),
     ('3', 'Nature'),
@@ -31,9 +35,9 @@ CATEGORY_CHOICES = (
 )
 
 
-class Category(models.Model):
+class Order(models.Model):
     name = models.CharField(max_length=30)
-    category_choices = models.CharField(max_length=1, choices=CATEGORY_CHOICES)
+    category_choices = models.CharField(max_length=1, choices=ORDER_CHOICES)
 
 
 class Photos(models.Model):
@@ -43,7 +47,7 @@ class Photos(models.Model):
     # one location may describe many images while many images may have one
     # location
     location = models.ForeignKey(Location)
-    category = models.ForeignKey(Category)
+    order = models.ForeignKey(Order)
 
     # __str__ will return string representation of the image model
     # __str__ will enable us view our returned queries
