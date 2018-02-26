@@ -20,3 +20,9 @@ class PlacesTestClass(TestCase):
         self.outdoor.save_places()
         places = Places.objects.all()
         self.assertTrue(places)
+
+    def test_delete_method(self):
+        self.outdoor = Places(name='outdoor')
+        self.outdoor.save_places()
+        self.outdoor.delete_places()
+        places = Places.objects.all()
