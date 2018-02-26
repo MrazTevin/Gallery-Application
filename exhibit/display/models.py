@@ -14,6 +14,9 @@ class Places(models.Model):
     def __str__(self):
         return self.name
 
+    def save_places(self):
+        self.save()
+
 
 # iterable tuple to use as choices of category field
 # renaming class Category to Order due to error in terminal;
