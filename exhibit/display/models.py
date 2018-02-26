@@ -34,3 +34,23 @@ CATEGORY_CHOICES = (
 class Category(models.Model):
     name = models.CharField(max_length=30)
     category_choices = models.CharField(max_length=1, choices=CATEGORY_CHOICES)
+
+
+class Images(models.Model):
+    image_name = models.CharField(max_length=20)
+    image_description = models.CharField(max_length=30)
+    # post will contain the image content
+    post = models.TextField(default=True)
+    # one location may describe many images while many images may have one
+    # location
+    location = models.ForeignKey(Location, blank=True, default=True)
+    category = models.ForeignKey(Category, blank=True, default=True)
+
+    # __str__ will return string representation of the image model
+    # __str__ will enable us view our returned queries
+
+    def __str__(self):
+        return self.image_name
+
+    class Meta:
+        ordering = ['image_name']
