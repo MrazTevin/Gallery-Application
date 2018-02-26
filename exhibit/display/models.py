@@ -75,10 +75,13 @@ class Photos(models.Model):
     # __str__ will enable us view our returned queries
 
     def __str__(self):
-        return self.image_name
-
-    class Meta:
-        ordering = ['photo_name']
+        return self.photo_name
 
     def save_order(self):
         self.save()
+
+    def delete_order(self):
+        self.delete()
+
+    class Meta:
+        ordering = ['photo_name']
