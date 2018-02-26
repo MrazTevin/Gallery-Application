@@ -4,6 +4,9 @@ from django.db import models
 
 # Location model to enable us choose location
 
+# renaming class Location to Places due to error in terminal;
+# django.db.utils.ProgrammingError: relation "display_location" already exists
+
 
 class Location(models.Model):
     name = models.CharField(max_length=30)
@@ -39,7 +42,7 @@ class Order(models.Model):
     name = models.CharField(max_length=30)
     category_choices = models.CharField(max_length=1, choices=ORDER_CHOICES)
 
-# renaming class Images to Order due to error in terminal;
+# renaming class Images to Photos due to error in terminal;
 # django.db.utils.ProgrammingError: relation "display_images" already exists
 
 
