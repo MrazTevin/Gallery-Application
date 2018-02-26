@@ -84,8 +84,13 @@ class Photo(models.Model):
         self.delete()
 
     @classmethod
-    def search_by_category(cls, search_term):
+    def search_by_order(cls, search_term):
         display = cls.objects.filter(title__icontains=search_term)
+        return display
+
+    @classmethod
+    def filter_by_place(cls, place):
+        display = cls.objects.filter(place)
         return display
 
     class Meta:
