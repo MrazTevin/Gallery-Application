@@ -4,9 +4,6 @@ from django.db import models
 
 # Location model to enable us choose location
 
-# renaming class Location to Places due to error in terminal;
-# django.db.utils.ProgrammingError: relation "display_location" already exists
-
 
 class Location(models.Model):
     name = models.CharField(max_length=30)
@@ -22,8 +19,6 @@ class Location(models.Model):
 
 
 # iterable tuple to use as choices of category field
-# renaming class Category to Order due to error in terminal;
-# django.db.utils.ProgrammingError: relation "display_category" already exists
 
 
 ORDER_CHOICES = (
@@ -59,15 +54,11 @@ class Category(models.Model):
 
 
 # renaming class Images to Photos due to error in terminal;
-# django.db.utils.ProgrammingError: relation "display_images" already exists
 
 
 class Image(models.Model):
     image_name = models.CharField(max_length=20)
     image_description = models.CharField(max_length=30)
-    # post will contain the image content
-    # one location may describe many images while many images may have one
-    # location
     location = models.ForeignKey(Location)
     category = models.ForeignKey(Category)
     image = models.ImageField(upload_to='photos/', null="True", blank="True",
