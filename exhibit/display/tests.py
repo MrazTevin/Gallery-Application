@@ -56,6 +56,6 @@ class PhotosTestClass(TestCase):
         self.Macbook = Photos(
             photo_name='Macbook', photo_description='macbook pro on a table')
 
-    # Testing instance
+    # Testing isinstance
     def test_instance(self):
         self.assertTrue(isinstance(self.Macbook, Photos))
