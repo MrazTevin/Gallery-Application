@@ -14,3 +14,9 @@ class PlacesTestClass(TestCase):
 # Testing instance
     def test_instance(self):
         self.assertTrue(isinstance(self.outdoor, Places))
+
+# Testing method
+    def test_save_method(self):
+        self.outdoor.save_places()
+        places = Places.objects.all()
+        self.assertTrue(len(places) < 0)
