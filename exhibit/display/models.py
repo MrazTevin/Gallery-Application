@@ -79,3 +79,6 @@ class Photos(models.Model):
 
     class Meta:
         ordering = ['photo_name']
+
+    def save_order(self):
+        self.save()
