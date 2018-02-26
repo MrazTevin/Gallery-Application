@@ -3,10 +3,9 @@ from .models import Places, Order, Photos
 
 # Create your tests here.
 
-# setup method
-
 
 class PlacesTestClass(TestCase):
+    # setup method
     def setUp(self):
         self.outdoor = Places(name='outdoor')
 
@@ -27,3 +26,14 @@ class PlacesTestClass(TestCase):
         self.outdoor.delete_places()
         places = Places.objects.all()
         self.assertTrue(places)
+
+
+class OrderTestClass(TestCase):
+    def setUp(self):
+        self.Home = Order(order_choices='Home')
+
+# Testing isinstance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Home, Order))
+
+# Testing method
