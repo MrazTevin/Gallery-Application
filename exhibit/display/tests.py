@@ -37,3 +37,7 @@ class OrderTestClass(TestCase):
         self.assertTrue(isinstance(self.Home, Order))
 
 # Testing method
+    def test_save_method(self):
+        self.outdoor.save_order()
+        order = Order.objects.all()
+        self.assertTrue(order)
