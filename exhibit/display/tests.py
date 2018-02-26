@@ -30,7 +30,7 @@ class PlacesTestClass(TestCase):
 
 class OrderTestClass(TestCase):
     def setUp(self):
-        self.Home = Order(order_choices='Home')
+        self.Home = Order(name='Home')
 
 # Testing isinstance
     def test_instance(self):
