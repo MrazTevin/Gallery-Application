@@ -63,7 +63,7 @@ class PhotoTestClass(TestCase):
         self.new_Home.save()
 
         self.new_photo = Photo(
-            photo_name='Macbook', photo_description='macbook pro on a table')
+            photo_name='Flower', photo_description='A hibiscus flower with bee')
         self.new_photo.save()
 
         self.new_photo.place.add(self.new_place)
