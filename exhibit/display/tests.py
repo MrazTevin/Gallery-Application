@@ -26,3 +26,4 @@ class PlacesTestClass(TestCase):
         self.outdoor.save_places()
         self.outdoor.delete_places()
         places = Places.objects.all()
+        self.assertTrue(places)
