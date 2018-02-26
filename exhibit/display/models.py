@@ -27,20 +27,20 @@ class Place(models.Model):
 
 
 ORDER_CHOICES = (
-    ('1', 'Vegetation'),
-    ('2', 'Trees'),
-    ('3', 'Nature'),
-    ('4', 'Abstract'),
-    ('5', 'IT & Computers'),
-    ('6', 'Animals'),
-    ('7', 'Illustrations'),
-    ('8', 'Arts'),
-    ('9', 'Business'),
-    ('10', 'Industries'),
-    ('11', 'Objects'),
-    ('12', 'Technology'),
-    ('13', 'People'),
-    ('14', 'Travel'),
+    ('11', 'Vegetation'),
+    ('12', 'Trees'),
+    ('13', 'Nature'),
+    ('14', 'Abstract'),
+    ('15', 'IT & Computers'),
+    ('16', 'Animals'),
+    ('17', 'Illustrations'),
+    ('18', 'Arts'),
+    ('19', 'Business'),
+    ('20', 'Industries'),
+    ('21', 'Objects'),
+    ('22', 'Technology'),
+    ('23', 'People'),
+    ('24', 'Travel'),
 )
 
 
