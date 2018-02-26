@@ -17,6 +17,9 @@ class Places(models.Model):
     def save_places(self):
         self.save()
 
+    def delete_places(self):
+        self.save()
+
 
 # iterable tuple to use as choices of category field
 # renaming class Category to Order due to error in terminal;
