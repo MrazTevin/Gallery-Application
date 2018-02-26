@@ -1,95 +1,79 @@
 from django.test import TestCase
-from .models import Place, Order, Photo
+from .models import Location, Category, Image
 
 # Create your tests here.
 
 
-class PlaceTestClass(TestCase):
+class LocationTestClass(TestCase):
     # setup method
     def setUp(self):
-        self.outdoor = Place(name='outdoor')
+        self.outdoor = Location(name='outdoor')
 
 
 # Testing instance
     def test_instance(self):
-        self.assertTrue(isinstance(self.outdoor, Place))
+        self.assertTrue(isinstance(self.outdoor, Location))
 
 # Testing method
     def test_save_method(self):
-        self.outdoor.save_place()
-        place = Place.objects.all()
-        self.assertTrue(place)
+        self.outdoor.save_location()
+        location = Location.objects.all()
+        self.assertTrue(location)
 
     def test_delete_method(self):
-        self.outdoor = Place(name='outdoor')
-        self.outdoor.save_place()
-        self.outdoor.delete_place()
-        place = Place.objects.all()
-        self.assertTrue(place)
+        self.outdoor = Location(name='outdoor')
+        self.outdoor.save_location()
+        self.outdoor.delete_location()
+        location = Location.objects.all()
+        self.assertTrue(location)
 
 
-class OrderTestClass(TestCase):
+class CategoryTestClass(TestCase):
     def setUp(self):
-        self.Home = Order(name='Home')
+        self.Home = Category(name='Home')
 
 # Testing isinstance
     def test_instance(self):
-        self.assertTrue(isinstance(self.Home, Order))
+        self.assertTrue(isinstance(self.Home, Category))
 
 # Testing method
     def test_save_method(self):
-        self.Home.save_order()
-        order = Order.objects.all()
-        self.assertTrue(order)
+        self.Home.save_category()
+        category = Category.objects.all()
+        self.assertTrue(category)
 
     def test_delete_method(self):
-        self.Home = Order(name='Home')
-        self.Home.save_order()
-        self.Home.delete_order()
-        order = Order.objects.all()
-        self.assertTrue(order)
+        self.Home = Category(name='Home')
+        self.Home.save_category()
+        self.Home.delete_category()
+        category = Category.objects.all()
+        self.assertTrue(category)
 
 
-class PhotoTestClass(TestCase):
+class ImagesTestClass(TestCase):
     # setup method
     def setUp(self):
 
         # creating a new place and saving it
-        self.outdoor = Place(name='outdoor')
+        self.outdoor = Location(name='outdoor')
         self.outdoor.save_place()
 
         # creating a new order and saving it
-        self.new_Home = Order(name='Home')
+        self.new_Home = Category(name='Home')
         self.new_Home.save()
 
-        self.new_photo = Photo(
-            photo_name='Flower', photo_description='A hibiscus flower with bee')
-        self.new_photo.save()
+        self.new_image = Image(
+            image_name='Flower', image_description='A hibiscus flower with bee')
+        self.new_image.save()
 
-        self.new_photo.place.add(self.new_place)
-        self.new_photo.order.add(self.new_place)
+        self.new_images.location.add(self.new_location)
+        self.new_images.location.add(self.new_location)
 
     # Testing isinstance
     def test_instance(self):
-        self.assertTrue(isinstance(self.Flower, Photo))
+        self.assertTrue(isinstance(self.Flower, Image))
 
     def tearDown(self):
-        Place.objects.all().delete()
-        Order.objects.all().delete()
-        Photo.objects.all().delete()
-
-
-# # Testing method
-#
-#     def test_save_method(self):
-#         self.Macbook.save_photos()
-#         photos = Photos.objects.all()
-#         self.assertTrue(photos)
-#
-#     def test_delete_method(self):
-#         self.Macbook = Photos(photo_name='Macbook',
-#                               photo_description='macbook pro on a table', blank='True')
-#         self.Macbook.save_photos()
-#         self.macbook.delete_photos()
-#         photos = Photos.objects.all()
-#         self.assertTrue(photos)
+        Location.objects.all().delete()
+        Category.objects.all().delete()
+        Image.objects.all().delete()
