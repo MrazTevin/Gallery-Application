@@ -54,7 +54,7 @@ class PhotosTestClass(TestCase):
     # setup method
     def setUp(self):
         self.Macbook = Photos(
-            name='Macbook', description='macbook pro on a table')
+            photo_name='Macbook', photo_description='macbook pro on a table')
 
     # Testing instance
     def test_instance(self):
