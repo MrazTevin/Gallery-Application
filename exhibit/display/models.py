@@ -8,7 +8,7 @@ from django.db import models
 # django.db.utils.ProgrammingError: relation "display_location" already exists
 
 
-class Location(models.Model):
+class Places(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
@@ -52,7 +52,7 @@ class Photos(models.Model):
     # post will contain the image content
     # one location may describe many images while many images may have one
     # location
-    location = models.ForeignKey(Location)
+    places = models.ForeignKey(Places)
     order = models.ForeignKey(Order)
 
     # __str__ will return string representation of the image model
