@@ -14,10 +14,10 @@ class Place(models.Model):
     def __str__(self):
         return self.name
 
-    def save_places(self):
+    def save_place(self):
         self.save()
 
-    def delete_places(self):
+    def delete_place(self):
         self.save()
 
 
@@ -68,7 +68,7 @@ class Photo(models.Model):
     # post will contain the image content
     # one location may describe many images while many images may have one
     # location
-    places = models.ForeignKey(Place)
+    place = models.ForeignKey(Place)
     order = models.ForeignKey(Order)
 
     # __str__ will return string representation of the image model
