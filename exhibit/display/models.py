@@ -77,10 +77,10 @@ class Photos(models.Model):
     def __str__(self):
         return self.photo_name
 
-    def save_order(self):
+    def save_photos(self):
         self.save()
 
-    def delete_order(self):
+    def delete_photos(self):
         self.delete()
 
     class Meta:
