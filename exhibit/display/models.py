@@ -37,8 +37,8 @@ class Category(models.Model):
 
 
 class Photos(models.Model):
-    image_name = models.CharField(max_length=20)
-    image_description = models.CharField(max_length=30)
+    photo_name = models.CharField(max_length=20)
+    photo_description = models.CharField(max_length=30)
     # post will contain the image content
     # one location may describe many images while many images may have one
     # location
