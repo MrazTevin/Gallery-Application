@@ -41,3 +41,10 @@ class OrderTestClass(TestCase):
         self.Home.save_order()
         order = Order.objects.all()
         self.assertTrue(order)
+
+    def test_delete_method(self):
+        self.Home = Places(name='Home')
+        self.Home.save_order()
+        self.Home.delete_order()
+        order = Order.objects.all()
+        self.assertTrue(order)
