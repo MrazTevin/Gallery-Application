@@ -1,18 +1,19 @@
 {%extends 'base.html'%}
-<h2>df</h2>
 {% block content %}
 {{block.super}}
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top:60px;">
   <!--looping through displays-->
-  {% for display_item in display %}
+  {% for display_item in images %}
 <div class="row">
   <!-- displayin all images -->
   <div class="col-md-3 col-md-3 col-md-3 col-md-3">
-    <img src="{{diplay_item.article_image.url}}" class="img-responsive" alt="image">
+    <img src="{{diplay_item.photo.url}}" class="img-responsive" alt="image">
   </div>
   {% empty %}
   <div class="row">
-      <h2 class="text-center">There No Display Items</h2>
+    <h1 class="text-center text-info">There No Display Items</h1>
   </div>
   {% endfor %}
+</div>
+
 {% endblock %}

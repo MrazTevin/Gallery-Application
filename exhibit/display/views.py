@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Photo
 # Create your views here.
 
 
@@ -7,7 +7,8 @@ def images(request):
     '''
     function to display the index page
     '''
-    return render(request, 'images.html')
+    images = Photo.objects.all()
+    return render(request, 'images.html', {"images": images})
 
 
 def home(request):
