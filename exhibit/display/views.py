@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from .models import Image
 # Create your views here.
 
@@ -9,6 +10,13 @@ def images(request):
     '''
     images = Image.objects.all()
     return render(request, 'images.html', {"images": images})
+
+
+def image(request, image_id):
+
+    images = Image.objects.get(id=image_id)
+
+    return render(request, "image.html", {"images": images})
 
 
 def home(request):
