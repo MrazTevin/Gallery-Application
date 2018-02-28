@@ -1,6 +1,6 @@
 # Gallery Application
 
-![Tevin's Gallery](display/static/assets/galleryapp.png "A personal gallery application that displays images for others to see.")
+![Tevin's Gallery](static/assets/galleryapp.png "A personal gallery application that displays images for others to see.")
 
 ## Specifications
 
