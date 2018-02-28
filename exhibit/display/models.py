@@ -62,9 +62,6 @@ class Image(models.Model):
     location = models.ForeignKey(Location)
     category = models.ForeignKey(Category)
     image = models.ImageField(upload_to='photos/', null="True", blank="True")
-    # width_field = models.IntegerField(default=0)
-    # height_field = models.IntegerField(default=0)
-    # width_field="width_field", height_field="height_field"
 
     # __str__ will return string representation of the image model
     # __str__ will enable us view our returned queries
@@ -80,12 +77,17 @@ class Image(models.Model):
 
     @classmethod
     def search_by_category(cls, search_term):
-        display = cls.objects.filter(title__icontains=search_term)
+        display = cls.objects.filter(category__name__icontains=search_term)
         return display
 
+    # @classmethod
+    # def location(cls):
+    #     display = cls.objects.filter(location__name__icontains=cls)
+    #     return display
     @classmethod
-    def filter_by_location(cls, location):
-        display = cls.objects.filter(location)
+    def filter_by_location(cls):
+        display = cls.objects.filter(
+            location__name__icontains='Silicon Valley')
         return display
 
     class Meta:
