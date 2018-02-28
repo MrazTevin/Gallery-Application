@@ -1,6 +1,6 @@
 # Gallery Application
 
-![Tevin's Gallery](https://www.dropbox.com/s/vgwvqj45as6i2sx/Screenshot%202018-02-28%2015.13.13.png?dl=0 "A personal gallery application that displays images for others to see.")
+![Tevin's Gallery](display/static/assets/galleryapp.png "A personal gallery application that displays images for others to see.")
 
 ## Specifications
 
