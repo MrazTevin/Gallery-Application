@@ -12,6 +12,15 @@ def images(request):
     return render(request, 'images.html', {"images": images})
 
 
+def Silicon_Valley(request):
+    '''
+    function to display the location page
+    '''
+
+    images = Image.filter_by_location()
+    return render(request, 'Silicon Valley.html', {"imagey": images},)
+
+
 def image(request, image_id):
 
     images = Image.objects.get(id=image_id)
