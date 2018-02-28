@@ -25,10 +25,10 @@
       </div>
       <div>
         <!-- The text field -->
-        <input type="text" value="Image Link" id="myInput">
+        <input type="text" value="https://photobooth.herokuapp.com/{{images.id}}" id="myInput">
 
         <!-- The button used to copy the text -->
-        <button onclick="myFunction()">Copy </button>
+        <button class="btn btn-warning" onclick="myFunction()">Copy Link </button>
         <hr>
       </div>
       <!--/.Content-->
@@ -36,13 +36,13 @@
 
     <!--/.Card reveal-->
   </div>
-  <!-- <script>
+  <script>
 function myFunction() {
   var copyText = document.getElementById("myInput");
   copyText.select();
   document.execCommand("Copy");
   alert("Copied the text: " + copyText.value);
 }
-</script> -->
+</script>
 
   {% endblock %} -->
