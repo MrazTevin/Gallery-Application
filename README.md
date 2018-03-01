@@ -1,4 +1,5 @@
 # Gallery Application
+<hr>
 
 ![Tevin's Gallery](static/assets/galleryapp.png)
 
@@ -11,13 +12,14 @@
 
 
 ## Getting Started
+<hr>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
 ```
-1.Git
+  1.Git
   2.Python: 3.6.4 versions
   3.Django: 1.11 or greater version
   4.Have Internet connection
@@ -39,8 +41,8 @@ These instructions will get you a copy of the project up and running on your loc
 > $ git clone https://github.com/MrazTevin/Gallery-Application.git
 > $ Python3.6 -m venv Virtual
 > $ Source virtual/bin/activate
-> [See deployed Version At]
 ```
+
 
 ## Running the tests
 * To test the functionalities of this app run the command below on your terminal:
@@ -79,12 +81,12 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Django](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Python](https://maven.apache.org/) - Dependency Management
-* [Bootstrap3](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-* [UI KIT](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-* [MDB Bootstrap](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-* [Heroku](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Django](https://www.djangoproject.com/) - The web framework used
+* [Python](https://www.python.org/) - Development language used
+* [Bootstrap3](https://getbootstrap.com/) - Used to design app layout.
+* [UI KIT](https://getuikit.com) - Used for UI/Ux 
+* [MDB Bootstrap](https://mdbootstrap.com/) - Used to design the User Interface
+* [Heroku](https://www.heroku.com/) - Used to deploy application
 
 
 ## Authors
