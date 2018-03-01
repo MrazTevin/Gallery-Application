@@ -7,7 +7,7 @@
 
 ## Specifications
 
-> Please see[SPECIFICATIONS.md](https://github.com/MrazTevin/SPECS.md) for details
+> Please see[SPECIFICATIONS.md](https://github.com/MrazTevin/Gallery-Application/blob/master/SPECS.md) for details
   on the behaviour driven development of this app
 
 
